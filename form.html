@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reserva - Restaurante</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Sabor da Casa</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="form.html">Reserva</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Faça sua reserva</h2>
+    <form action="formAction.html" method="get" onsubmit="return validarFormulario()">
+      <label>Nome: <input type="text" name="nome" id="nome" required /></label><br>
+      <label>Email: <input type="email" name="email" id="email" required /></label><br>
+      <label>Telefone: <input type="tel" name="telefone" id="telefone" required pattern="[0-9]{10,11}" /></label><br>
+      <label>Data: <input type="date" name="data" required /></label><br>
+      <label>Hora: <input type="time" name="hora" required /></label><br>
+      <label>Pessoas: <input type="number" name="pessoas" required min="1" max="20" /></label><br>
+      <input type="submit" value="Reservar" />
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Restaurante Sabor da Casa</p>
+  </footer>
+</body>
+</html>
