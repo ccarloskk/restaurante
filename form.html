@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserva - Restaurante</title>
+  <link rel="stylesheet" href="css/form.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <h1 class="logo">Point Paraense</h1>
+      <button class="mobile-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="form.html"class="active">Reserva</a></li>
+          <li><a href="about.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="form-section">
+      <h2>Faça sua reserva</h2>
+      <form id="form-reserva" action="formAction.html" method="get">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" name="telefone" id="telefone" required pattern="[0-9]{10,11}" />
+
+        <label for="data">Data:</label>
+        <input type="date" name="data" id="data" required />
+
+        <label for="hora">Hora:</label>
+        <input type="time" name="hora" id="hora" required step="1800" />
+        
+        <label for="pessoas">Pessoas:</label>
+        <input type="number" name="pessoas" id="pessoas" required min="1" max="20" />
+
+        <input type="submit" value="Reservar" />
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-info">
+        <p>&copy; 2025 Restaurante Point Paraense</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
